@@ -60,5 +60,14 @@ describe("Vampire", function() {
       expect(offspring7.closestCommonAncestor(offspring8).name).to.equal(rootVampire.name);
       expect(offspring8.closestCommonAncestor(offspring7).name).to.equal(rootVampire.name);
     })
+
+    it("should be offspring 3 for offspring 4 and 5", () => {
+      expect(offspring4.closestCommonAncestor(offspring5).name).to.equal(offspring3.name);
+    })
+
+    it("should be root for offspring 4 and 8", () => {
+      expect(offspring4.closestCommonAncestor(offspring8).name).to.equal(rootVampire.name);
+    })
+
   });
 });
